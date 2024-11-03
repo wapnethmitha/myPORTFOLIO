@@ -1,0 +1,213 @@
+/* General Styles */
+* {
+    box-sizing: border-box;
+}
+
+/* Specify font(s) */
+body {
+    font-family: 'Roboto', sans-serif; /* Specify fallback */
+    margin: 0;
+    padding: 0;
+    background-color: #e7dfd8; /* Colour */
+    color: #231f20;
+}
+
+header {
+    padding: 1em 0;
+    text-align: center;
+}
+
+header > nav > ul {
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+}
+
+nav > ul > li {
+    display: inline;
+    margin: 0 30px;
+}
+
+/* Attribute selectors */
+header > nav > ul > li:nth-child(odd) > a {
+    color: #000000;
+}
+
+header > nav > ul > li:nth-child(even) > a {
+    color: #231f20e6; /* Semi-transparent colour */
+}
+
+header > nav > ul > li > a {
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    padding-bottom: 5px;
+    position: relative;
+    transition: color 0.3s ease, text-shadow 0.3s ease; /* Transition */
+}
+
+/* Text effects */
+header > nav > ul > li > a::after {
+    content: ""; /* Pseudo element */
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #ca0000;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+header > nav > ul > li > a:hover,
+header > nav > ul > li.active > a {
+    color: #ca0000; 
+}
+
+header > nav > ul > li > a:hover::after,
+header > nav > ul > li.active > a::after {
+    transform: scaleX(1);
+}
+
+/* Main Styles */
+main {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    margin: 0 auto;
+    border-radius: 20px; /* Rounded corners */
+    background: radial-gradient(ellipse at top left, #ece9e6 0%, #d0c4bdd2 70%, #c0b6a89f 100%); /* Gradient */
+    min-height: calc(100vh - 140px);
+    max-width: 1200px;
+    width: 100%;
+}
+
+main > section {
+    flex: 3;
+    padding: 10px;
+}
+
+.myphoto { 
+    width: 70%;
+    margin: -130px 0 0 70px;
+}
+
+/* Main Headings */
+main > section > h1 {
+    font-size: 60px;
+    margin-top: 20px;
+}
+
+main > section > h2 {
+    font-size: 35px;
+    margin: -20px 0 0 200px;
+}
+
+main > section > p {
+    font-size: 25px;
+    line-height: 1.6;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.vertical-line {
+    width: 2px; 
+    background-color: #231f204d; /* Shadow */
+    margin: 0 5px 0 30px;
+}
+
+/* Aside Styles */
+aside {
+    flex: 1;
+    padding: 20px;
+}
+
+aside > h2 {
+    text-align: center;
+    font-size: 25px;
+}
+
+.social-media {
+    margin: 30px 100px;
+    list-style: none;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    gap: 30px;
+}
+
+.social-media > li {
+    margin: 0 10px;
+}
+
+/* Image hover effect using transitions */
+.social-media > li > a > img {
+    width: 40px;
+    transition: transform 0.2s ease; /* Transition */
+}
+
+.social-media > li > a > img:hover {
+    transform: scale(1.3); /* Scale image on hover */
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    color: #231f20;
+}
+
+/* About Page Styles */
+.about-container {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.about-photo {
+    width: 350px;
+    height: auto;
+    margin-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-title {
+    font-size: 60px;
+    margin-bottom: -30px;
+    color: #231f20;
+    text-align: center;
+}
+
+.introduction-card {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Card Styles with Shadows and Rounded Corners */
+.card {
+    background-color: rgba(0, 0, 0, 0.15); /* Semi-transparent colour */
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow */
+    margin: 40px 0;
+    padding: 25px;
+    width: 100%;
+}
+
+.about-subtitle {
+    margin-top: 20px;
+    color: #603c15b1;
+    font-size: 1.8em;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;  
+}
+
+.about-text {
+    line-height: 1.8;
+    font-size: 22px;
+    color: #231f20;
+    margin: 20px 0;
+    text-align: center;
+}
