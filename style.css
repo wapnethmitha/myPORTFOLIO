@@ -364,3 +364,112 @@ button:not(:hover) {
 .card, .blog-post, main > section > p {
     animation: fadeIn 2s ease-in; /* Animation */
 }
+
+@media only screen and (max-width: 768px) {
+    header nav > ul {
+        flex-direction: column;
+        padding: 5px;
+    }
+
+    header nav > ul > li {
+        margin: 10px 10px;
+    }
+
+    main {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    main > section {
+        padding: 10px 0;
+    }
+
+    #myphoto {
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    main > section > h1 {
+        font-size: 32px;
+        text-align: left;
+    }
+
+    main > section > h2 {
+        font-size: 24px;
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    main > section > p {
+        font-size: 25px;
+        line-height: 1.5;
+    }
+
+    .social-media {
+        margin: 20px 0;
+        justify-content: center;
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .social-media > li {
+        margin: 0 10px;
+    }
+
+    .social-media > li > a > img {
+        width: 50px;
+        transition: transform 0.2s ease;
+        padding-right: 20px;
+    }
+
+    footer {
+        font-size: 14px;
+    }
+
+    .about-container {
+        padding: 10px;
+    }
+
+    .about-title {
+        font-size: 2.5em;
+    }
+
+    .about-subtitle {
+        font-size: 1.2em;
+    }
+
+    .about-text {
+        font-size: 1em;
+    }
+
+    .about-photo {
+        width: 100%;
+        max-width: none;
+    }
+
+    .blog-title {
+        font-size: 30px;
+    }
+
+    .contact-container {
+        padding: 10px;
+    }
+
+    .contact-title {
+        font-size: 32px;
+    }
+
+    .contact-description {
+        font-size: 18px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 16px;
+    }
+}
