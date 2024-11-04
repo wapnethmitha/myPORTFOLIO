@@ -29,12 +29,13 @@ nav > ul > li {
 }
 
 /* Attribute selectors */
+/*Using Child Combinator*/
 header > nav > ul > li:nth-child(odd) > a {
     color: #000000;
 }
-
+/*Using Nth Pseudo class*/
 header > nav > ul > li:nth-child(even) > a {
-    color: #231f20e6; /* Semi-transparent colour */
+    color: #231f2091; /* Semi-transparent colour */
 }
 
 header > nav > ul > li > a {
@@ -56,10 +57,10 @@ header > nav > ul > li > a::after {
     bottom: 0;
     left: 0;
     transform: scaleX(0);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease; /*Text Effect*/
 }
 
-header > nav > ul > li > a:hover,
+header > nav > ul > li > a:hover,/*Text Effect*/
 header > nav > ul > li.active > a {
     color: #ca0000; 
 }
@@ -221,6 +222,12 @@ footer {
     padding: 25px;
     width: 100%;
 }
+/*Using a Structural Selector - first-child*/
+.blog-post:first-child {
+    border: 2px solid #ca00007e; 
+    margin-top: 20px;
+}
+
 
 .blog-title,
 .blog-date {
@@ -242,8 +249,8 @@ input:valid {
     color: #666666;
     margin-bottom: 15px;
 }
-
-.blog-text {
+/*Using a relational selector - general sibling*/
+.blog-title ~ .blog-text {
     font-weight: bolder;
     line-height: 1.8;
     font-size: 22px;
@@ -251,6 +258,7 @@ input:valid {
     text-align: justify;
     margin: 20px 0;
 }
+
 
 /* Contact Page Styles */
 .contact-container {
@@ -280,7 +288,7 @@ input:valid {
 .contact-form,
 .newsletter-form {
     background-color: rgba(249, 249, 249, 0.6); /* Semi-transparent colour */
-    border: 1px solid #ddd;
+    border: 1px solid #ddd;/*Border*/
     border-radius: 8px; /* Rounded corners */
     padding: 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow */
@@ -341,4 +349,18 @@ button:not(:hover) {
 
 #project { 
     background-image: url('images/project.jpg');
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.card, .blog-post, main > section > p {
+    animation: fadeIn 2s ease-in; /* Animation */
 }
